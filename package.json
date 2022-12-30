@@ -1,0 +1,16 @@
+{
+  "name": "web-runner",
+  "version": "0.0.1",
+  "description": "Chrome extension to browse web sites without a mouse using keyboard arrows.",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Alex Kalinkou",
+  "license": "MIT"
+}
