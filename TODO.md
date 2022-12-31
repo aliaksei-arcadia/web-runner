@@ -4,7 +4,7 @@
 - [x] Add .gitignore file
 - [ ] Add README.md
 - [ ] Configure linters
-- [ ] Configure typescript
+- [X] Configure typescript
 - [ ] Configure Jest tests
 - [ ] Configure github actions to
   - [ ] run linter
