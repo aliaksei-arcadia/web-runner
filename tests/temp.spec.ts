@@ -1,3 +1,3 @@
-it('should hello world', function () {
-    expect(true)
+it("should hello world", function () {
+  expect(true);
 });

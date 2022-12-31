@@ -153,7 +153,7 @@ bower_components
 .lock-wscript
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
-build/Release
+dist/Release
 
 # Dependency directories
 node_modules/
@@ -256,4 +256,4 @@ dist
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij,node
 
-build
+dist

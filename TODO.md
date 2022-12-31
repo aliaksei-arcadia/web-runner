@@ -3,7 +3,7 @@
 - [x] Create git repository
 - [x] Add .gitignore file
 - [ ] Add README.md
-- [ ] Configure linters
+- [x] Configure linters
 - [X] Configure typescript
 - [x] Configure Jest tests
 - [ ] Configure github actions to
