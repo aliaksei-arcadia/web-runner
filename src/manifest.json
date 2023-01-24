@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Web Runner (mouseless browsing)",
+  "description": "Chrome extension that allows to browse websites using keyboard arrows instead of a mouse",
+  "version": "0.1",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "down": {
+      "suggested_key": {
+        "default": "Ctrl+Down"
+      },
+      "description": "Move focus down to the next clickable element."
+    },
+    "up": {
+      "suggested_key": {
+        "default": "Ctrl+Up"
+      },
+      "description": "Move focus up to the next clickable element."
+    },
+    "left": {
+      "suggested_key": {
+        "default": "Ctrl+Left"
+      },
+      "description": "Move focus up to the next clickable element."
+    },
+    "right": {
+      "suggested_key": {
+        "default": "Ctrl+Right"
+      },
+      "description": "Move focus up to the next clickable element."
+    }
+  }
+}
