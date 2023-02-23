@@ -6,6 +6,12 @@
   "background": {
     "service_worker": "background.js"
   },
+  "content_scripts": [
+    {
+      "js": ["index.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
   "commands": {
     "down": {
       "suggested_key": {
@@ -23,13 +29,13 @@
       "suggested_key": {
         "default": "Ctrl+Left"
       },
-      "description": "Move focus up to the next clickable element."
+      "description": "Move focus left to the next clickable element."
     },
     "right": {
       "suggested_key": {
         "default": "Ctrl+Right"
       },
-      "description": "Move focus up to the next clickable element."
+      "description": "Move focus right to the next clickable element."
     }
   }
 }
