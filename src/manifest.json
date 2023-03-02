@@ -17,19 +17,19 @@
       "suggested_key": {
         "default": "Ctrl+Down"
       },
-      "description": "Move focus down to the next clickable element."
+      "description": "Move focus down to the next interactive element."
     },
     "up": {
       "suggested_key": {
         "default": "Ctrl+Up"
       },
-      "description": "Move focus up to the next clickable element."
+      "description": "Move focus up to the next interactive element."
     },
     "left": {
       "suggested_key": {
         "default": "Ctrl+Left"
       },
-      "description": "Move focus left to the next clickable element."
+      "description": "Move focus left to the next interactive element."
     },
     "right": {
       "suggested_key": {
