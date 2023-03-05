@@ -5,14 +5,13 @@ chrome.runtime.onMessage.addListener(processMessage);
 // Set current node to the top visible node.
 // On message, navigate to a respective node and focus on it.
 
-
 async function processMessage(message: any, sender: any, sendResponse: any) {
-    console.log(`Message=${JSON.stringify(message)}`);
-    // Message={"command":"down"}
-    console.log(`Sender=${JSON.stringify(sender)}`);
-    // Sender={"id":"pepablbafnpilfgogmgiacbnlmngmmad","origin":"null"}
-    console.log(`SendResponse=${JSON.stringify(sendResponse)}`);
-    // SendReponse=undefined
+  console.log(`Message=${JSON.stringify(message)}`);
+  // Message={"command":"down"}
+  console.log(`Sender=${JSON.stringify(sender)}`);
+  // Sender={"id":"pepablbafnpilfgogmgiacbnlmngmmad","origin":"null"}
+  console.log(`SendResponse=${JSON.stringify(sendResponse)}`);
+  // SendReponse=undefined
 }
 
 // chrome.runtime.onMessage.addListener(details => {
