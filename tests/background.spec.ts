@@ -32,17 +32,19 @@ describe("navigationBtnPressed", () => {
     tabsMessageSpy.mockClear();
   });
 
-  it.each([['up'], ['down'], ['left'], ['right']])
-  (`should emit an event for an active tab and '%p' command`, async (command: string) => {
-    const tabId = 123;
-    const message = { command: command };
-    const tab = buildTab({ id: tabId, active: true });
-    chrome.tabs.query.mockResolvedValueOnce([tab]);
+  it.each([["up"], ["down"], ["left"], ["right"]])(
+    `should emit an event for an active tab and '%p' command`,
+    async (command: string) => {
+      const tabId = 123;
+      const message = { command: command };
+      const tab = buildTab({ id: tabId, active: true });
+      chrome.tabs.query.mockResolvedValueOnce([tab]);
 
-    await navigationBtnPressed(message.command);
+      await navigationBtnPressed(message.command);
 
-    expect(tabsMessageSpy).toHaveBeenCalledWith(tabId, message);
-  });
+      expect(tabsMessageSpy).toHaveBeenCalledWith(tabId, message);
+    }
+  );
 
   it("should not emit an event if there's no active tab", async () => {
     const message = { command: "up" };
@@ -53,13 +55,20 @@ describe("navigationBtnPressed", () => {
     expect(tabsMessageSpy).not.toHaveBeenCalled();
   });
 
-  it("should not emit an event for non-arrow key commands", async () => {
-    const message = { command: 'up-command'};
-    const tab = buildTab({});
-    chrome.tabs.query.mockResolvedValueOnce([tab]);
+  it.each`
+    command         | description
+    ${"up-command"} | ${"including expected verbiage"}
+    ${"another"}    | ${"not expected"}
+  `(
+    "should not emit an event for $description commands",
+    async ({ command }) => {
+      const message = { command: command };
+      const tab = buildTab({});
+      chrome.tabs.query.mockResolvedValueOnce([tab]);
 
-    await navigationBtnPressed(message.command);
+      await navigationBtnPressed(message.command);
 
-    expect(tabsMessageSpy).not.toHaveBeenCalled();
-  });
+      expect(tabsMessageSpy).not.toHaveBeenCalled();
+    }
+  );
 });
